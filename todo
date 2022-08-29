@@ -1,7 +1,2 @@
-package index
-	for now just copy packages manually, or maybe use a handler when python packages are sent to rpi
-	later set up server that can put uploads to right folder
-
-
 look at sys log for rpi to diagnose what is wrong right now - 11:05 am 8/28
 https://forums.raspberrypi.com/viewtopic.php?f=36&t=234058&p=1432916#p1432916
