@@ -2,7 +2,7 @@ import atexit
 from ftplib import FTP
 import os
 
-import rpi_tools.ftp_config as ftp_config
+import rpi_tools.ftp_cli.ftp_config as ftp_config
 
 
 class FTP_IF:

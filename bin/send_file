@@ -1,0 +1,7 @@
+#!/usr/bin/python
+import sys
+
+from rpi_tools.ftp_cli import dispatcher
+
+fname = sys.argv[1]
+dispatcher.send_file(fname)

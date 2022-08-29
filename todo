@@ -1,12 +1,2 @@
-file server
-	maybe add snippets to directory and have a cron or trigger that collates them
-		incrontab -e
-		incrontab -l
-
-	brew install inetutils
-package index
-	just so i can push CB packages to a still-private index for personal use
-
-
 look at sys log for rpi to diagnose what is wrong right now - 11:05 am 8/28
 https://forums.raspberrypi.com/viewtopic.php?f=36&t=234058&p=1432916#p1432916

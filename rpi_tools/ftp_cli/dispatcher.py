@@ -3,7 +3,7 @@ import logging
 import random
 import sys
 
-from .ftp_cli import FTP_IF
+from .ftp_if import FTP_IF
 
 log = logging.getLogger()
 log.setLevel(logging.INFO)
@@ -29,7 +29,3 @@ def send_file(fname):
     remotef = fname.split('/')[-1]
     ftp_if = FTP_IF()
     ftp_if.put(fname, f"files/{remotef}")
-
-if __name__ == "__main__":
-    # send_note(sys.argv[1])
-    send_file(sys.argv[1])
