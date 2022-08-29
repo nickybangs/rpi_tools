@@ -19,12 +19,14 @@ setup(
     author_email='nicky.bangs@gmail.com',
     data_files=[('', ['ftp.json'])],
     packages=find_packages(include=["rpi_tools", "rpi_tools.*"]),
+    scripts=[
+        'bin/send_note',
+        'bin/send_file',
+        'bin/get_notes',
+        'bin/get_file',
+    ],
     entry_points={
         'console_scripts': [
-            'send_note = rpi_tools.ftp_cli.dispatcher:send_note',
-            'send_file = rpi_tools.ftp_cli.dispatcher:send_file',
-            'get_note = rpi_tools.ftp_cli.fetcher:get_note',
-            'get_file = rpi_tools.ftp_cli.fetcher:get_file',
             'ftp_handler = rpi_tools.ftp_handler.__main__:main'
             ]
         },

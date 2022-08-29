@@ -1,5 +1,6 @@
 package index
-	just so i can push CB packages to a still-private index for personal use
+	for now just copy packages manually, or maybe use a handler when python packages are sent to rpi
+	later set up server that can put uploads to right folder
 
 
 look at sys log for rpi to diagnose what is wrong right now - 11:05 am 8/28

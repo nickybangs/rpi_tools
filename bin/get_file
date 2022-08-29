@@ -1,0 +1,7 @@
+#!/usr/bin/python
+import sys
+
+from rpi_tools.ftp_cli import fetcher
+
+fname = sys.argv[1]
+fetcher.get_file(fname)
