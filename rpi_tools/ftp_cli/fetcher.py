@@ -1,7 +1,7 @@
 import logging
 import sys
 
-from .ftp_cli import FTP_IF
+from .ftp_if import FTP_IF
 from .settings import HOME
 
 log = logging.getLogger()

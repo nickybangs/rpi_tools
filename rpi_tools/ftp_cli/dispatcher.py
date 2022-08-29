@@ -3,7 +3,7 @@ import logging
 import random
 import sys
 
-from .ftp_cli import FTP_IF
+from .ftp_if import FTP_IF
 
 log = logging.getLogger()
 log.setLevel(logging.INFO)

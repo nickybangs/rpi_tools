@@ -1,9 +1,3 @@
-file server
-	maybe add snippets to directory and have a cron or trigger that collates them
-		incrontab -e
-		incrontab -l
-
-	brew install inetutils
 package index
 	just so i can push CB packages to a still-private index for personal use
 
