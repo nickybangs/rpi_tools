@@ -1,18 +1,12 @@
 import io
 import logging
-import random
 import sys
 
+from .common import random_chars
 from .ftp_if import FTP_IF
 
 log = logging.getLogger()
 log.setLevel(logging.INFO)
-
-def random_char():
-    return chr(random.randint(ord('a'), ord('z')))
-
-def random_chars(num):
-    return ''.join([random_char() for i in range(num)])
 
 def send_note(note):
     ftp_if = FTP_IF()

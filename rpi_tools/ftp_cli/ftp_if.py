@@ -22,20 +22,23 @@ class FTP_IF:
     def get(self, localf, remotef):
         self.ftp.retrbinary("RETR " + remotef ,open(localf, 'wb').write)
 
+    def list(self, path):
+        self.ftp.retrlines(f"LIST {path}")
+
     def put_stream(self, stream, remotef):
         self.ftp.storlines(f"STOR {remotef}", stream)
 
     def put(self, localf, remotef):
         self.ftp.storbinary(f"STOR {remotef}", open(localf, "rb"), 1024)
 
-    def list(self):
-        self.ftp.retrlines("LIST")
-
+    def rename(self, from_file, to_name):
+        self.ftp.rename(from_file, to_name)
 
 
 if __name__ == "__main__":
     ftp_cli = FTP_IF()
-    ftp_cli.list()
+    ftp_cli.list("files")
+    # ftp_cli.rename("/files/temp.fc", "/archive/temp.fc")
     # local_fname = "/tmp/note_kjhlzl.txt"
     # remote_fname = "/files/test.txt"
     # ftp_cli.put(local_fname, remote_fname)

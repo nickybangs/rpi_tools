@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-version = "0.0.2"
+version = "0.0.3"
 
 with open('README.md', encoding='utf-8') as readme_file:
     readme = readme_file.read()
@@ -24,6 +24,7 @@ setup(
         'bin/send_file',
         'bin/get_notes',
         'bin/get_file',
+        'bin/list_files',
     ],
     entry_points={
         'console_scripts': [
