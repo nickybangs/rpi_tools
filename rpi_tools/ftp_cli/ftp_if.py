@@ -28,8 +28,14 @@ class FTP_IF:
     def put(self, localf, remotef):
         self.ftp.storbinary(f"STOR {remotef}", open(localf, "rb"), 1024)
 
+    def list(self):
+        self.ftp.retrlines("LIST")
+
+
+
 if __name__ == "__main__":
     ftp_cli = FTP_IF()
-    local_fname = "/tmp/note_kjhlzl.txt"
-    remote_fname = "/files/test.txt"
-    ftp_cli.put(local_fname, remote_fname)
+    ftp_cli.list()
+    # local_fname = "/tmp/note_kjhlzl.txt"
+    # remote_fname = "/files/test.txt"
+    # ftp_cli.put(local_fname, remote_fname)
